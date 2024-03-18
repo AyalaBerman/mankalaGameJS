@@ -1,0 +1,305 @@
+body * {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+
+.board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+
+  background-image: url(images/board.jpg);
+  padding: 1em;
+  box-sizing: border-box;
+  max-width: 90vw;
+  max-height: 100vh;
+  grid-area: board;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.half1 {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1em;
+
+}
+
+.half2 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+
+
+}
+
+.hole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vw;
+  width: 6vw;
+  margin: 0.5em;
+  padding: 1em;
+  position: relative;
+  border-radius: 100%;
+  background-image: url(images/hole.jpg);
+  background-size: 130%;
+  margin-bottom: 2em;
+  margin-top: 2em;
+
+}
+
+.bighole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16vw;
+  width: 5vw;
+  margin: 1.5em;
+  padding: 1em;
+  position: relative;
+  border-radius: 100%;
+  background-image: url(images/hole.jpg);
+  background-size: 180%;
+
+}
+
+.holes {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.bighole img {
+  width: 80%;
+  height: 50%;
+  border-radius: 100%;
+}
+
+.animation {
+
+  animation-name: amount;
+  animation-duration: 2s;
+  animation-iteration-count: infinitive;
+  position: absolute;
+  color: white;
+}
+
+.player1 *,
+.player2 * {
+  pointer-events: none;
+}
+
+@keyframes amount {
+  0% {
+    transform: translateY(0px);
+    opacity: 100%;
+    font-size: small;
+  }
+
+  100% {
+    transform: translateY(-70px);
+    opacity: 0%;
+    font-size: xx-large;
+  }
+}
+
+#addstone {
+  animation-name: addstone;
+  animation-duration: 1s;
+  animation-iteration-count: infinitive;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+}
+
+@keyframes addstone {
+  0% {
+    transform: translateY(-100px);
+    opacity: 100%;
+  }
+
+  75% {
+    transform: translateY(-15px);
+    opacity: 50%;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 0%;
+
+  }
+}
+
+#body_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#scores {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-area: levels;
+}
+
+#levels {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  grid-area: levels;
+  top: 30vh;
+  right: 30vw;
+  background-image: url(images/logo.jpg);
+  background-size: cover;
+  height: 40vh;
+  width: 40vw;
+  opacity: 70%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(135, 67, 0);
+  border-radius: 5px;
+
+}
+
+
+#scores div {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(135, 67, 0, 0.8);
+  padding: 1em;
+  border-radius: 5px;
+  margin: 2em;
+}
+
+#levels div {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(135, 67, 0);
+  padding: 1em;
+  border-radius: 5px;
+  margin: 2em;
+  width: 10vw;
+}
+
+#body_form {
+  background-image: url(images/logo.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#body_form div {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+input {
+  width: 40vw;
+  height: 6vh;
+  margin: 1em;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.4);
+
+}
+
+a,
+#winner_buttons * {
+
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: rgb(135, 67, 0, 0.8);
+  padding: 1em;
+  border-radius: 5px;
+  margin: 2em;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(135, 67, 0);
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 10px;
+  width: 50vw;
+  height: 48vh;
+  direction: rtl;
+  margin: 5em;
+}
+
+
+#winner {
+  position: fixed;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  top: 20vh;
+  right: 20vw;
+  background-image: url(images/logo2.jpg);
+  background-size: cover;
+  height: 60vh;
+  width: 60vw;
+  opacity: 70%;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(135, 67, 0);
+  border-radius: 5px;
+
+
+}
+
+#winner_buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+#winner_name {
+  margin: 0.2em;
+  font-size: 2.5em;
+  text-shadow: 110px;
+}
+
+
+
+#instructions {
+  width: 95vw;
+  height: 95vh;
+}
+
+#body_instructions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#body_instructions a {
+  margin-right: 10em;
+}

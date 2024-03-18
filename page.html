@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="body_page">
+    <div id="scores">
+      <div id="score2">score</div>
+      <div id="score1">score</div>
+      <div id="high_score">השיא</div>
+    </div>
+    <div id="instruction">עברו על הגומחה כדי להתעדכן בכמות האבנים</div>
+
+    <div class="board">
+      <div class="bighole player2" id="0">
+        <div id="value0"></div>
+      </div>
+      <div class="holes">
+        <div class="row">
+          <div class="half1">
+            <div class="hole player1 pair1" id="1">
+              <div id="value1"></div>
+            </div>
+            <div class="hole player1 pair2" id="2">
+              <div id="value2"></div>
+            </div>
+            <div class="hole player1 pair3" id="3">
+              <div id="value3"></div>
+            </div>
+          </div>
+          <div class="half2">
+            <div class="hole player1 pair4" id="4">
+              <div id="value4"></div>
+            </div>
+            <div class="hole player1 pair5" id="5">
+              <div id="value5"></div>
+            </div>
+            <div class="hole player1 pair6" id="6">
+              <div id="value6"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="half1">
+            <div class="hole player2 pair1" id="13">
+              <div id="value13"></div>
+            </div>
+            <div class="hole player2 pair2" id="12">
+              <div id="value12"></div>
+            </div>
+            <div class="hole player2 pair3" id="11">
+              <div id="value11"></div>
+            </div>
+          </div>
+          <div class="half2">
+            <div class="hole player2 pair4" id="10">
+              <div id="value10"></div>
+            </div>
+            <div class="hole player2 pair5" id="9">
+              <div id="value9"></div>
+            </div>
+            <div class="hole player2 pair6" id="8">
+              <div id="value8"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="bighole player1" id="7">
+        <div id="value7"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="levels">
+    <div id="levelb">רמה ב</div>
+    <div id="levela">רמה א</div>
+  </div>
+  <audio id="audio1" preload="auto">
+    <source src="audio/stone.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="audio2" preload="auto">
+    <source src="audio/clap.wav" type="audio/mpeg">
+  </audio>
+
+  <div id="winner">
+    <div id="winner_name">אילה</div>
+    <div id="winner_buttons">
+      <div id="restart">למשחק נוסף</div>
+      <a href="home.html">לסיום המשחק</a>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

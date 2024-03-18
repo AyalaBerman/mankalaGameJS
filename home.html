@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body id="body_form">
+    <form action="#" method="get" id="form">
+        <input type="text" placeholder="שחקן ראשון" id="user_name_a">
+        <input type="text" placeholder="שחקן שני" id="user_name_b">
+        <input type="text" placeholder="סיסמה" id="code" pattern="1234" required>
+        <input type="submit" value="שליחת נתונים" id="button">
+    </form>
+    <div> <a href="page.html">להתחלת המשחק</a>
+        <a href="instructions.html">להוראות המשחק</a>
+    </div>
+
+    <script>
+
+
+        document.getElementById("form").addEventListener("submit", function (event) {
+            let code = document.getElementById("code");
+            let code_value = code.value;
+            let pattern = new RegExp(code.pattern)
+            if (!pattern.test(code_value)) {
+                code.setCustomValidity('הסיסמה שגויה');
+                event.preventDefault();
+            }
+            else {
+                let user1 = document.getElementById("user_name_a");
+                let user2 = document.getElementById("user_name_b");
+                localStorage.setItem("user1", user1.value);
+                localStorage.setItem("user2", user2.value);
+                user1.value = "";
+                user2.value = ""
+                code.value = "";
+
+            }
+
+
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
